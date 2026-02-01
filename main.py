@@ -59,7 +59,7 @@ def start(m):
 
 
 # ===== МАТЧИ =====
-@bot.message_handler(func=lambda m: m.text=="📅 Матчи")
+@bot.message_handler(func=lambda m: "Матчи" in m.text)
 def games(m):
 
     url = "https://www.balldontlie.io/api/v1/games?per_page=5"
@@ -75,7 +75,7 @@ def games(m):
 
 
 # ===== ПРОГНОЗ =====
-@bot.message_handler(func=lambda m: m.text=="🔮 Прогноз")
+@bot.message_handler(func=lambda m: "Прогноз" in m.text)
 def predict(m):
 
     url = "https://www.balldontlie.io/api/v1/games?per_page=20"
@@ -115,7 +115,7 @@ def predict(m):
 
 
 # ===== СТАТА =====
-@bot.message_handler(func=lambda m: m.text=="📊 Статистика")
+@bot.message_handler(func=lambda m: "Статистика" in m.text)
 def stats(m):
 
     bot.send_message(
@@ -125,7 +125,7 @@ def stats(m):
 
 
 # ===== ПОМОЩЬ =====
-@bot.message_handler(func=lambda m: m.text=="ℹ️ Помощь")
+@bot.message_handler(func=lambda m: "Помощь" in m.text)
 def help(m):
 
     bot.send_message(
